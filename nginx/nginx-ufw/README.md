@@ -20,3 +20,12 @@
 ---
 
 ### Ответ
+
+```bash
+sudo dnf install ufw -y
+
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+
+```
+

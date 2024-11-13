@@ -35,3 +35,21 @@ web-server: 0
 ---
 
 ### Ответ
+
+```nginx
+server {
+    listen 80;
+    server_name localhost;
+    
+    location / {
+        root /path/to/nginx/root;
+        index index.html;
+    }
+    
+    location /api/ {
+        proxy_pass http://localhost:9090/;
+        proxy_set_header Host $host;
+    }
+}
+```
+
